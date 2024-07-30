@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Morabba;
+    src: url(../font/IRAN-Rounded.ttf);
+}
+*{
+    font-family: Morabba;
+    word-spacing: 1px;
+    @apply text-base;
+}
+
+@layer components{
+    .nav-link-md-active{
+      box-shadow: -4px -5px 5px 0px #0000003f inset,2px 4px 10px 0px #f0f4f885 inset;
+        @apply flex flex-col justify-center items-center text-xl  text-lightf w-full py-2 rounded-lg bg-primary border border-primary;
+    }
+    .nav-link-md{
+        @apply flex flex-col justify-center items-center text-xl  w-full py-2 rounded-lg bg-lights text-darkf border-lights border transition-all duration-200 hover:bg-primary hover:border-primary hover:text-lightf;
+    }
+    .nav-link-md:hover{
+      box-shadow: -4px -5px 5px 0px #0000003f inset,2px 4px 10px 0px #f0f4f885 inset;
+    }
+    .direction-ltr{
+        direction: ltr;
+    }
+}
+
+@layer utilities{
+    /* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-secondary;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary
+  }
+}
