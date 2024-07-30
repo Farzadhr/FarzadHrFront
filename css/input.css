@@ -26,6 +26,12 @@
     .direction-ltr{
         direction: ltr;
     }
+    .btn-primary{
+      @apply px-5 py-3 rounded-xl bg-primary text-lightf border border-primary transition-all duration-200;
+    }
+    .btn-primary:hover{
+      box-shadow: 4px 5px 5px 0px #0000003f inset,-2px -4px 10px 0px #f0f4f885 inset;
+    }
 }
 
 @layer utilities{
